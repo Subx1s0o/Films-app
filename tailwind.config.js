@@ -7,17 +7,12 @@ module.exports = {
     extend: {
       colors: {
         primary: "#161622",
+        violet: "#1e1b4b"
       },
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'], // Загальний шрифт
+        poppins: ['Poppins', 'sans-serif'], 
       },
-      // Додаємо кастомні класи для шрифтів
-      fontWeight: {
-        pRegular: '400',   // для Poppins 400Regular
-        pBold: '700',      // для Poppins 700Bold
-        pMedium: '500',    // для Poppins 500Medium
-        pSemi: '600',      // для Poppins 600SemiBold
-      },
+     
     },
   },
   plugins: [],

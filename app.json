@@ -1,0 +1,23 @@
+{
+    "expo": {
+      "name": "Films App",
+      "slug": "Films App",
+      "platforms": ["ios", "android", "web"],
+      "version": "1.0.0",
+      "sdkVersion": "52.0.0", 
+      "assetBundlePatterns": ["**/*"],
+      "ios": {
+        "bundleIdentifier": "com.yourname.yourappname",
+        "buildNumber": "1.0.0",
+        "newArchEnabled": true
+      },
+      "android": {
+        "package": "com.yourname.yourappname",
+        "versionCode": 1,
+        "newArchEnabled": true
+      },
+      "scheme": "yourappscheme",
+      "description": "A simple Expo app"
+    }
+  }
+  

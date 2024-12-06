@@ -1,19 +1,36 @@
-import { View, Text } from "react-native";
-import React from "react";
-import { Link } from "expo-router";
+import React, { useEffect, useState } from "react";
 
-const index = () => {
-  return (
-    <View className="flex  items-center justify-center h-full ">
-      <Text className="mb-5 font-poppins font-pBold ">index</Text>
-      <Link
-        href="/profile"
-        className="px-10 py-5 font-poppins bg-blue-700 rounded-xl text-white"
-      >
-        Link to profile
-      </Link>
-    </View>
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
+import WelcomeScreen from "@/components/screens/WelcomeScreen";
+import { Redirect } from "expo-router";
+
+const Index = () => {
+  const [hasSeenWelcome, setHasSeenWelcome] = useState(false);
+
+  useEffect(() => {
+    const checkWelcomeStatus = async () => {
+      const welcomeStatus = await AsyncStorage.getItem("hasSeenWelcome");
+      if (welcomeStatus === "true") {
+        setHasSeenWelcome(true);
+      } else {
+        setHasSeenWelcome(false);
+      }
+    };
+
+    checkWelcomeStatus();
+  }, []);
+
+  const handleFinishWelcome = async () => {
+    await AsyncStorage.setItem("hasSeenWelcome", "true");
+    setHasSeenWelcome(true);
+  };
+
+  return hasSeenWelcome ? (
+    <Redirect href="(tabs)/home" />
+  ) : (
+    <WelcomeScreen onFinish={handleFinishWelcome} />
   );
 };
 
-export default index;
+export default Index;
