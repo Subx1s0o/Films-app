@@ -15,6 +15,11 @@ module.exports = function (api) {
           },
         },
       ],
+      ['module:react-native-dotenv', {
+        moduleName: '@env',
+        path: '.env',
+      }],
+    
     ],
   };
 };

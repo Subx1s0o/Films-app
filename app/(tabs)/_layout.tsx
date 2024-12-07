@@ -3,16 +3,19 @@ import React from "react";
 import { Tabs } from "expo-router";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 const TabsLayout = () => {
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <Tabs
         screenOptions={{
           tabBarActiveTintColor: "white",
           tabBarInactiveTintColor: "gray",
           tabBarStyle: {
-            backgroundColor: "#14053b",
+            backgroundColor: "#150C31",
             borderTopWidth: 0,
           },
           tabBarLabelStyle: { fontSize: 12, fontFamily: "Poppins" },
@@ -51,7 +54,7 @@ const TabsLayout = () => {
           }}
         />
       </Tabs>
-    </>
+    </QueryClientProvider>
   );
 };
 
