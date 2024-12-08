@@ -1,8 +1,7 @@
 import { View, Text, Image } from "react-native";
 import React from "react";
 
-const FilmCard = ({ data }) => {
-  console.log(data);
+const FilmCard = ({ data }: { data: Film }) => {
   return (
     <View className="bg-violet w-full rounded-xl p-5 flex flex-row gap-5">
       <Image

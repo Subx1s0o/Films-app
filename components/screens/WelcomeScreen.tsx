@@ -1,7 +1,6 @@
 import {
   SafeAreaView,
   View,
-  Button,
   Text,
   ImageBackground,
   Pressable,
@@ -26,7 +25,7 @@ const WelcomeScreen = ({ onFinish }: { onFinish: () => void }) => {
             </Text>
           </View>
           <Pressable
-            className="bg-violet w-full py-8 rounded-2xl mb-10 "
+            className="bg-cherry w-full py-8 rounded-2xl mb-10 "
             onPress={onFinish}
           >
             <Text className="text-white text-center font-semibold text-2xl ">

@@ -7,7 +7,7 @@ import FilmCard from "./ui/FilmCard";
 import { Link } from "expo-router";
 
 const FilmList = ({ title, genreId }: { title: string; genreId: number }) => {
-  const { data, isLoading, error } = useQuery({
+  const { data, isLoading, error } = useQuery<Film[]>({
     queryKey: ["films", genreId],
     queryFn: () => searchFilmByGenreId(genreId),
   });
@@ -31,7 +31,7 @@ const FilmList = ({ title, genreId }: { title: string; genreId: number }) => {
         {data.map((film, index) => (
           <Link
             key={index + 1}
-            href={`/search/${film.id}`}
+            href={`/film/${film.id}`}
             className="flex-1 justify-center items-center"
           >
             <FilmCard data={film} />
