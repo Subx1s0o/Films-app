@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 import PagerView from "react-native-pager-view";
 import { useQuery } from "@tanstack/react-query";
 import searchFilmByGenreId from "@/actions/searchFilmByGenre";
-import FilmCard from "./ui/FilmCard";
+import FilmCard from "./FilmCard";
 import { Link } from "expo-router";
 
 const FilmList = ({ title, genreId }: { title: string; genreId: number }) => {
