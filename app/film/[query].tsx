@@ -37,18 +37,18 @@ const SearchQueryPage = () => {
             source={{
               uri: `https://image.tmdb.org/t/p/w500${data?.poster_path}`,
             }}
-            className="w-[200px] z-10 h-[300px] left-4 rounded-xl absolute -bottom-[150px]"
+            className="w-[170px] z-10 h-[250px] left-4 rounded-xl absolute -bottom-[150px]"
           />
         </View>
-        <View className="px-4 pt-48">
-          <View className="absolute left-[230px] top-4">
+        <View className="px-4 ">
+          <View className="pl-52 pt-4 mb-5">
             <Text
-              className="text-white font-semibold mb-5 font-poppins text-lg text-ellipsis overflow-hidden whitespace-normal max-w-[200px]"
+              className="text-white font-semibold mb-5 font-poppins text-lg text-ellipsis overflow-hidden whitespace-normal max-w-[300px]"
               numberOfLines={1}
             >
               {data?.title}
             </Text>
-            <View className="flex flex-row w-[185px] justify-between mb-5">
+            <View className="flex flex-row flex-1 justify-between mb-5">
               <Text className="text-white font-poppins text-sm font-bold border p-2 rounded-lg border-white ">
                 {String(data?.vote_average).slice(0, 3)} rate
               </Text>

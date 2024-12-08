@@ -5,6 +5,7 @@
       "platforms": ["ios", "android", "web"],
       "version": "1.0.0",
       "sdkVersion": "52.0.0", 
+      "jsEngine": "jsc",
       "assetBundlePatterns": ["**/*"],
       "ios": {
         "bundleIdentifier": "com.yourname.yourappname",
